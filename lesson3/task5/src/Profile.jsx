@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 const monthList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -10,15 +11,17 @@ const getDateBirth = date => {
     return `${day} ${month} ${year}`;
 };
 
+const formatDate = date => 
+  moment(date).format("DD MMM YYYY");
+
 const Profile = (props) => {
-    console.log(props.userData);
     return (
         <>
             <div className="profile__name">
                 {`${props.userData.firstName} ${props.userData.lastName}`}
             </div>
             <div className="profile__birth">
-                {`Was born ${getDateBirth(props.userData.birthDate)}
+                {`Was born ${formatDate(props.userData.birthDate)}
                     in ${props.userData.birthPlace}`}
             </div>
         </>
