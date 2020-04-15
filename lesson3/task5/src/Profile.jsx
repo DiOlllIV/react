@@ -10,15 +10,15 @@ const getDateBirth = date => {
     return `${day} ${month} ${year}`;
 };
 
-const Profile = (userData) => {
+const Profile = (props) => {
     return (
         <div className="profile">
             <span className="profile__name">
-                {`${userData.user.firstName} ${userData.user.lastName}.`}
+                {`${props.userData.firstName} ${props.userData.lastName}.`}
             </span>
             <span className="profile__birth">
-                {`Was born ${getDateBirth(userData.user.birthDate)}
-                    in ${userData.user.birthPlace}.`}
+                {`Was born ${getDateBirth(props.userData.birthDate)}
+                    in ${props.userData.birthPlace}.`}
             </span>
         </div>
     );
