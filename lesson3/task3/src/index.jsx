@@ -5,14 +5,14 @@ import Comment from './Comment';
 
 const rootElem = document.querySelector('#root');
 
-const author ={
+const user ={
     name: 'Tom',
     avatarUrl: 'https://avatars3.githubusercontent.com/u10001'
   }
 
 ReactDOM.render(
     <Comment
-      user={author}
+      author={user}
       text="Good job"
       date={new Date()}
     />,
