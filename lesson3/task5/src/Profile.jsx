@@ -13,12 +13,8 @@ const getDateBirth = date => {
 const Profile = (props) => {
     return (
         <>
-            <div className="profile__name">
-                {`${props.userData.firstName} ${props.userData.lastName}`}
-            </div>
-            <div className="profile__birth">
-                {`Was born ${getDateBirth(props.userData.birthDate)} in ${props.userData.birthPlace}`}
-            </div>
+            <div className="profile__name">{`${props.userData.firstName} ${props.userData.lastName}`}</div>
+            <div className="profile__birth">{`Was born ${getDateBirth(props.userData.birthDate)} in ${props.userData.birthPlace}`}</div>
         </>
     );
 };
