@@ -1,9 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
 import './search.scss';
-
-const rootElem = document.querySelector('#root');
 
 const Search = (props) => {
     return (
@@ -17,4 +13,4 @@ const Search = (props) => {
     );
 };
 
-ReactDOM.render(<Search name="Tom" />, rootElem)
+export default Search;
