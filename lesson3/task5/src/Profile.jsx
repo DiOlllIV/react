@@ -12,7 +12,7 @@ const getDateBirth = date => {
 };
 
 const formatDate = date => 
-  moment(date).format("DD MMM YYYY");
+  moment(date).format("DD MMM YY");
 
 const Profile = (props) => {
     return (
