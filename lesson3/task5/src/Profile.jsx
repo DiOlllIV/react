@@ -8,7 +8,7 @@ const user = {
     birthPlace: 'London'
 };
 
-const Profile = () => {
+const Profile = (userData) => {
     return (
         <UserInfo userData={user} />
     );
