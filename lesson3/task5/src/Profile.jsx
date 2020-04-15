@@ -1,16 +1,27 @@
 import React from 'react';
-import UserInfo from './UserInfo';
 
-const user = {
-    firstName: 'John',
-    lastName: 'Doe',
-    birthDate: '1991-01-17T11:11:11.819Z',
-    birthPlace: 'London'
+const monthList = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+const getDateBirth = date => {
+    const day = new Date(date).getDate();
+    const year = new Date(date).getYear();
+    const month = monthList[new Date(date).getMonth()];
+
+    return `${day} ${month} ${year}`;
 };
 
-const Profile = (userData) => {
+const Profile = (props) => {
+    console.log(props.userData);
     return (
-        <UserInfo userData={user} />
+        <>
+            <div className="profile__name">
+                {`${props.userData.firstName} ${props.userData.lastName}`}
+            </div>
+            <div className="profile__birth">
+                {`Was born ${getDateBirth(props.userData.birthDate)}
+                    in ${props.userData.birthPlace}`}
+            </div>
+        </>
     );
 };
 
