@@ -10,9 +10,7 @@ const user = {
 
 const Profile = () => {
     return (
-        <div className="profile">
-            <UserInfo userData={user} />
-        </div>
+        <UserInfo userData={user} />
     );
 };
 
