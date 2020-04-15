@@ -1,11 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import App from './App';
+import Comment from './Comment';
 
 const rootElem = document.querySelector('#root');
 
+const userInfo ={
+    name: 'Tom',
+    avatarUrl: 'https://avatars3.githubusercontent.com/u10001'
+  }
+
 ReactDOM.render(
-    <App />,
+    <Comment
+      user={userInfo}
+      text="Good job"
+      date={new Date()}
+    />,
     rootElem
 );
