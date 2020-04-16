@@ -11,7 +11,7 @@ class Counter extends Component{
             this.setState({
                 counter: this.state.counter + 1
             });  
-        }, props.setInterval || 1000);
+        }, props.interval || 1000);
     }
 
     render () {

@@ -5,9 +5,6 @@ import './clock.scss';
 const formatDate = offset => 
     moment().utcOffset(offset).format('LTS');
 
-console.log(formatDate(0));
-
-
 class Clock extends Component {
     constructor (props){
         super(props)
@@ -15,7 +12,7 @@ class Clock extends Component {
             time: formatDate(props.offset),
             city: props.location
         };
-console.log(props.offset);
+        
         setInterval(() => {
             this.setState({
                 time: formatDate(props.offset) 
