@@ -25,7 +25,6 @@ class Toggler extends Component {
                 value: this.state.value = 'Off',
             });
         }
-        console.log(this.state.click)
     }
 
     render() {
