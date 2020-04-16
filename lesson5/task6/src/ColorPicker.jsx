@@ -30,17 +30,17 @@ class ColorPicker extends Component{
                 <div>
                     <button 
                         className="picker__button picker__button_coral"
-                        onMouseEnter={() => this.checkColor('CORAL')}
+                        onMouseEnter={() => this.checkColor('Coral')}
                         onMouseOut={this.resetText}>   
                     </button>
                     <button 
                         className="picker__button picker__button_aqua"
-                        onMouseEnter={() => this.checkColor('AQUA')}
+                        onMouseEnter={() => this.checkColor('Aqua')}
                         onMouseOut={this.resetText}>
                     </button>
                     <button 
                         className="picker__button picker__button_bisque"
-                        onMouseEnter={() => this.checkColor('BISQUE')}
+                        onMouseEnter={() => this.checkColor('Bisque')}
                         onMouseOut={this.resetText}>
                     </button>
                 </div>
