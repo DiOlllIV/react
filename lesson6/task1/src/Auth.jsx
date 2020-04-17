@@ -29,10 +29,9 @@ class Auth extends Component {
             <div className="panel">
                 <Greeting  isLoggedIn={this.state.isLoggedIn} />
                 <div>
-                {(this.state.isLoggedIn) ?
-                    <Logout forLogOut={this.handleLogOut}/> :
-                    <Login forLogIn={this.handleLogIn}/> 
-                    
+                {(!this.state.isLoggedIn) ?
+                    <Login forLogIn={this.handleLogIn}/> :
+                    <Logout forLogOut={this.handleLogOut}/>
                 }
                 </div>
             </div>
