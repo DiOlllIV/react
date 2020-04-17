@@ -40,8 +40,8 @@ class Auth extends Component {
     }
 
     render(){
-        let button = (!this.state.isLoggedIn) ?
-            <Login onClick={this.showSpinner} onLogin={this.handleLogIn} /> :
+        const button = (!this.state.isLoggedIn) ?
+            <Login onLogin={this.handleLogIn} /> :
             <Logout onLogout={this.handleLogOut} />
 
         return(
