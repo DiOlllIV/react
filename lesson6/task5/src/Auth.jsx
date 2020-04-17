@@ -24,7 +24,6 @@ class Auth extends Component {
         this.setState({
             isLoggedIn: false,
         });
-        this.showSpinner();
     }
 
     showSpinner = () => {
@@ -46,7 +45,8 @@ class Auth extends Component {
 
         return(
             <div className="main">
-                {this.state.isVisibleSpinner ? <Spinner size={25} /> : button}
+                {this.state.isVisibleSpinner ? 
+                    <Spinner size={25} /> : button}
             </div>
         );
     }
