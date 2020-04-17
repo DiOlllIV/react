@@ -28,9 +28,9 @@ class Auth extends Component {
                 <Greeting  isLoggedIn={this.state.isLoggedIn} />
                 <div>
                 {(this.state.isLoggedIn) ?
-                    (<button className="btn" 
+                    (<button className="btn login" 
                     onClick={this.handleLogOut}>Logout</button>) :
-                    (<button className="btn" 
+                    (<button className="btn logout" 
                     onClick={this.handleLogIn}>Login</button>)
                 }
                 </div>

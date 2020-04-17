@@ -3,7 +3,7 @@ import React from 'react';
 const UserGreeting = (props) => {
 
     return (
-        <h1>Hi User ;)</h1>
+        <h1>Hello, user 😎</h1>
     );
 }
 
