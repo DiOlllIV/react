@@ -4,10 +4,10 @@ import Transaction from './Transaction';
 class TransactionsList extends Component {
     
     render() {
-        const transactions = this.props.transactions;
+        const transactionsList = this.props.transactions;
         return (
             <ul className="transactions">
-                {transactions.map(transaction => 
+                {transactionsList.map(transaction => 
                     <Transaction key={transaction.id} {...transaction}/>)}
             </ul>
         );
