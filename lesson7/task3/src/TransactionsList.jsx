@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import Transaction from './Transaction';
 
-class Transactions extends Component {
+class TransactionsList extends Component {
     
     render() {
-        const transactionsList = this.props.transactions;
+        const transactions = this.props.transactions;
         return (
             <ul className="transactions">
-                {transactionsList.map(transaction => 
+                {transactions.map(transaction => 
                     <Transaction key={transaction.id} {...transaction}/>)}
             </ul>
         );
     }
 }
 
-export default Transactions;
+export default TransactionsList;
