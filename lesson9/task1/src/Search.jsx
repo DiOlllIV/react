@@ -16,7 +16,7 @@ class Search extends Component {
 
     search = e => {
         e.preventDefault();
-        alert(this.state.value);
+        alert(`Search text: ${this.state.value}`);
     }
 
     render() {
