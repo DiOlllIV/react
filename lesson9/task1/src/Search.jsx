@@ -16,7 +16,7 @@ class Search extends Component {
 
     search = e => {
         e.preventDefault();
-        console.log(this.state.value);
+        alert(this.state.value);
     }
 
     render() {
