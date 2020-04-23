@@ -29,7 +29,8 @@ class UserForm extends Component {
 
     render() {
         return(
-            <form className="login-form">
+            <form className="login-form"
+            onSubmit={this.handleSubmit} >
                 <h1 className="form-title">Profile</h1>
                 <div className="form-control">
                   <label className="form-label" 
@@ -77,7 +78,6 @@ class UserForm extends Component {
                   className="form-input" />
                 </div>
                 <button className="submit-button"
-                onClick={this.handleSubmit} 
                 type="submit">Submit</button>
             </form>
         );
