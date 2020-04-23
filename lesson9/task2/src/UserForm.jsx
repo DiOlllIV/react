@@ -64,7 +64,7 @@ class UserForm extends Component {
                     <option value="london">London</option>
                     <option value="new-york">New York</option>
                     <option value="coconut">Sidney</option>
-                    <option value="berlin">Berlin</option>
+                    <option value="mango">Berlin</option>
                   </select>
                 </div>
                 <div className="form-control">
