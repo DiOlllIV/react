@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Product from './Product';
 
-class ProductList extends Component {
+class ProductsList extends Component {
 
     render() {
         const total = this.props.cartItems
@@ -27,4 +27,4 @@ class ProductList extends Component {
     }
 }
 
-export default ProductList;
+export default ProductsList;
