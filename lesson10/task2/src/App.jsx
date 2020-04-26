@@ -24,9 +24,7 @@ class App extends Component {
         return(
             <div className="page">
                 <h1 className="title">
-                    {`Hello, 
-                        ${firstName}
-                        ${lastName}`}
+                    Hello, {firstName} {lastName}
                 </h1>
                 <main className="content">
                     <ShoppingCart 

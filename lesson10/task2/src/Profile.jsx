@@ -1,8 +1,8 @@
 import React from 'react';
 import UserForm from './UserForm';
 
-const Profile = ({userData, handleChange}) => {
-    return (
+const Profile = ({userData, handleChange}) => 
+    (
         <div className="column">
             <UserForm 
                 {...userData}
@@ -10,6 +10,6 @@ const Profile = ({userData, handleChange}) => {
             />
         </div>
     );
-};
+
 
 export default Profile;
