@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Product from './Product';
 
 class ProductList extends Component {
 
@@ -10,17 +11,13 @@ class ProductList extends Component {
             <div className="products">
                 <ul className="products__list">
                     {this.props.cartItems
-                        .map(({id,name,price}) =>
-                        (<li key={id} 
-                            className="products__list-item">
-                            <span className="products__item-name">
-                                {name}
-                            </span>
-                            <span className="products__item-price">
-                                {price}
-                            </span>   
-                        </li>
-                    ))}
+                        .map(item =>
+                        <Product
+                            key={item.id}
+                            name={item.name}
+                            price={item.price}
+                        />
+                    )}
                 </ul>
                 <div className="products__total">
                     {`Total: ${total}`}
