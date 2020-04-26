@@ -6,38 +6,34 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            userData: {
-                firstName: 'John',
-                lastName: 'Doe',
-            }
+            firstName: 'John',
+            lastName: 'Doe',
         };
     }
 
     handleChange = e => {
         const {name, value} = e.target;
         this.setState({
-            userData: {
-                ...this.state.userData,
-                [name]: value,
-            }
+            ...this.state,
+            [name]: value,
         });
     }
 
     render() {
-        const {userData} = this.state;
+        const {firstName, lastName} = this.state;
         return(
             <div className="page">
                 <h1 className="title">
                     {`Hello, 
-                        ${userData.firstName}
-                        ${userData.lastName}`}
+                        ${firstName}
+                        ${lastName}`}
                 </h1>
                 <main className="content">
                     <ShoppingCart 
-                        userData={this.state.userData}
+                        userName={firstName}
                     />
                     <Profile 
-                        userData={this.state.userData}
+                        userData={this.state}
                         handleChange={this.handleChange} 
                     />
                 </main>
