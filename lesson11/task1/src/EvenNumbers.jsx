@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class EventNumbers extends Component {
+class EvenNumbers extends Component {
     shouldComponentUpdate(nextProps) {
         
         return nextProps.number % 2 === 0 ;
@@ -20,4 +20,4 @@ class EventNumbers extends Component {
     }
 }
 
-export default EventNumbers;
+export default EvenNumbers;
