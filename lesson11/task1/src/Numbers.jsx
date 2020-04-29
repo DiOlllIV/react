@@ -2,12 +2,12 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 class Numbers extends PureComponent {
-    shouldComponentUpdate(nextProps) {
+    /* shouldComponentUpdate(nextProps) {
         if(this.props.numbers !== nextProps.number &&
                 this.props.title !== nextProps.title)
                 return true;
         return false;
-    }
+    } */
 
     render() {
         return (
