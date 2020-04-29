@@ -38,6 +38,9 @@ body {
         outline: none;
         cursor: pointer;
     }
+    &__icon-open{
+        transform: rotate(90deg);
+    }
 
     &__content {
         padding: 8px 0;
