@@ -29,7 +29,7 @@ class TasksList extends Component {
             text, 
             done: false,
         };
-
+        console.log(newTask)
         createTask(newTask)
             .then(() => this.fetchTasks());
     };
