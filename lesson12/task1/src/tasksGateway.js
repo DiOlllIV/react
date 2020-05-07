@@ -11,6 +11,7 @@ export const createTask = taskData => {
     .then(response => {
         if(!response.ok) 
             throw new Error('Failed to create task'); 
+            console.log(response)
     });
 };
 

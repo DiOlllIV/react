@@ -17,21 +17,23 @@ class TasksList extends Component {
 
     fetchTasks = () => {
         fetchTasksList()
-            .then(tasksList => 
+            .then(tasksList => {
+                console.log(tasksList)
                 this.setState({
                     tasks: tasksList,
-            }),
+            })},
         );
+        console.log(this.state.tasks);
     };
 
     onCreate = text => {
         const newTask = {
-            text, 
+            text: text, 
             done: false,
         };
-        console.log(newTask)
         createTask(newTask)
-            .then(() => this.fetchTasks());
+            .then(this.fetchTasks());
+        console.log(createTask(newTask))
     };
 
     handleTaskStatusChange = id => {
@@ -63,6 +65,7 @@ class TasksList extends Component {
                 />
                 <ul className="list">
                     {sortedList.map(task => {
+                        console.log(task);
                         return(
                         <Task key={task.id} {...task}
                             onDelete={this.handleTaskDelete} 
