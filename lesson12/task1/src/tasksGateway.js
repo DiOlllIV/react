@@ -1,4 +1,4 @@
-const baseUrl = 'https://5e870549781e48001676b644.mockapi.io/api/v1/tasks'
+const baseUrl = 'https://5e870549781e48001676b644.mockapi.io/tasks'
 
 export const createTask = taskData => {
     return fetch(baseUrl, {
@@ -10,8 +10,7 @@ export const createTask = taskData => {
     })
     .then(response => {
         if(!response.ok) 
-            throw new Error('Failed to create task'); 
-            console.log(response)
+            throw new Error('Failed to create task');
     });
 };
 
@@ -20,7 +19,8 @@ export const fetchTasksList = () => {
         .then(response => {
             if(response.ok)
                 return response.json();
-        });
+        })
+        .then(tasksList => tasksList);
 };
 
 export const updateTask = (taskId, taskData) => {

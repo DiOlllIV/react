@@ -18,12 +18,12 @@ class TasksList extends Component {
     fetchTasks = () => {
         fetchTasksList()
             .then(tasksList => {
-                console.log(tasksList)
                 this.setState({
                     tasks: tasksList,
-            })},
+            })
+            console.log(tasksList)
+        },
         );
-        console.log(this.state.tasks);
     };
 
     onCreate = text => {
@@ -32,8 +32,8 @@ class TasksList extends Component {
             done: false,
         };
         createTask(newTask)
-            .then(this.fetchTasks());
-        console.log(createTask(newTask))
+            .then(() => this.fetchTasks());
+            console.log(this.fetchTasks())
     };
 
     handleTaskStatusChange = id => {
@@ -64,8 +64,7 @@ class TasksList extends Component {
                     onCreate={this.onCreate}
                 />
                 <ul className="list">
-                    {sortedList.map(task => {
-                        console.log(task);
+                        {sortedList.map(task => {
                         return(
                         <Task key={task.id} {...task}
                             onDelete={this.handleTaskDelete} 

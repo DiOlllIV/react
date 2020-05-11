@@ -17,7 +17,6 @@ class CreateTaskInput extends Component {
     handleTaskCreate = () => {
         this.props.onCreate(this.state.value);
         this.setState({ value: '' });
-        console.log(this.state.value)
     }
 
     render() {
