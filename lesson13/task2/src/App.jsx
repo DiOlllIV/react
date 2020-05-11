@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter, Link, Route, Switch} from 'react-router-dom';
 import Products from './Products';
 import Home from './Home';
-import PageNotFound from './PageNotFound';
 
 const App = () => {
     
