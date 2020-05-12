@@ -1,9 +1,9 @@
 import React from 'react';
-import Demensions from './Demensions';
+import Dimensions from './Dimensions';
 
 const App = () => {  
     return (
-        <Demensions />
+        <Dimensions />
     );
     
 }
