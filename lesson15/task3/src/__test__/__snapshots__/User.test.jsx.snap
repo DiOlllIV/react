@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<User/> should return user with name James and Age 28 1`] = `
+<li
+  className="user"
+>
+  <span
+    className="user__name"
+  >
+    James
+  </span>
+  <span
+    className="user__age"
+  >
+    28
+  </span>
+</li>
+`;
