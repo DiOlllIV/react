@@ -17,7 +17,7 @@ exports[`<Mailbox/> should return 2 unreadmessages 1`] = `
 </div>
 `;
 
-exports[`<Mailbox/> should return only MailBox without undereadmessages 1`] = `
+exports[`<Mailbox/> should return only Mailbox without undereadmessages 1`] = `
 <div
   className="mailbox"
 >
