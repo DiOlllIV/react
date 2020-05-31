@@ -7,15 +7,15 @@ describe('<Mailbox/>', () => {
     const unreadMessages = [1, 2];
     const wrappedComponent = shallow(<Mailbox unreadMessages={unreadMessages} />);
 
-    expect(wrappedComponent).toMatchSnapshot();
+    expect(wrappedComponent.find('.mailbox__count').text()).toEqual('2');
   });
 });
 
 describe('<Mailbox/>', () => {
-  it('should return only Mailbox without undereadmessages', () => {
+  it('should return only Mailbox without unreadmessages', () => {
     const unreadMessages = [];
     const wrappedComponent = shallow(<Mailbox unreadMessages={unreadMessages}/>);
 
-    expect(wrappedComponent).toMatchSnapshot();
+    expect(wrappedComponent.find('.mailbox__count').exists()).toEqual(false);
   });
 });
